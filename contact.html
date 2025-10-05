@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Soultrip</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+<div class="contact-container">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you! Reach out with any questions or feedback.</p>
+    
+    <p><strong>Email:</strong> support@soultravel.com</p>
+    <p><strong>Phone:</strong> +91-9988868355</p>
+    <p><strong>Address:</strong> Travel Lane, Wagle Estate Thane - 421603, India</p>
+
+    <form id="ContactForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your full name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Your email address" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Write your message here..." required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+<style class="css">
+    /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: #e9f7ef; /* light green background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contact Box */
+.contact-container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 380px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.contact-container h1 {
+    color:rgb(69, 29, 69); /* dark green */
+    margin-bottom: 10px;
+}
+
+.contact-container p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 12px;
+    background:rgb(69, 29, 69); /* green */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background:rgb(69, 29, 69); /* darker green */
+}
+</style>
+<script class="js">
+document.getElementById("ContactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // ✅ आता ids lowercase केले
+    const fullName = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (!fullName || !email || !message) {
+        alert("Please fill out all fields.");
+        return;
+    }
+
+    alert(`Thank you, ${fullName}! Your Contact form with Email: ${email} and Message: "${message}" has been confirmed.`);
+});
+</script>
+
+</body>
+</html>

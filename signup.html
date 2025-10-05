@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create an Account</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Create an Account</h2>
+    <form id="SignUp">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Create a password" required>
+
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <p class="signin-text">
+  Already have an account? <a href="Signin.html">Sign In</a>
+</p>
+
+
+  </div>
+  <style class="css">
+    /* General page styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Container */
+.container {
+  width: 350px;
+  text-align: center;
+}
+
+/* Heading */
+.container h2 {
+  font-size: 28px;
+  color: #1e3a8a; /* Dark blue */
+  margin-bottom: 20px;
+}
+
+/* Labels */
+form label {
+  display: block;
+  text-align: left;
+  font-weight: bold;
+  margin: 10px 0 5px;
+  color: #1e3a8a;
+}
+
+/* Input fields */
+form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #a3c4f3;
+  border-radius: 8px;
+  outline: none;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+/* Button */
+form button {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb; /* Blue */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #1d4ed8;
+}
+
+/* Sign-in link */
+.signin-text {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.signin-text a {
+  color: #6a11cb;
+  text-decoration: none;
+  font-weight: 500;
+}
+</style>
+<script>
+     document.getElementById("SignUp").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // ✅ आता ids lowercase केले
+    const fullName = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    if (!fullName || !email || !password) {
+        alert("Please fill out all fields.");
+        return;
+    }
+     alert(`Thank you, ${fullName}! Your Contact form with Email: ${email} and Message: "${password}" has been confirmed.`);
+});
+
+
+ document.getElementById("signin-link").addEventListener("click", function (e) {
+    e.preventDefault(); // link reload होऊ नये म्हणून
+    window.location.href = "Signin.html"; // redirect
+  });
+</script>
+</body>
+</html>
+
+
+
+

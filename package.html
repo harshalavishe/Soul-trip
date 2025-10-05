@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Packages</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <h1>Travel Packages</h1>
+        <div class="packages">
+            <div class="package">Family Package <span>🌐</span></div>
+            <div class="package">Adventure Package <span>🌐</span></div>
+            <div class="package">Honeymoon Package <span>🌐</span></div>
+            <div class="package">Luxury Escape <span>🌐</span></div>
+            <div class="package">Beach Holiday <span>🌐</span></div>
+            <div class="package">Hill Station Retreat <span>🌐</span></div>
+            <div class="package">Wildlife Safari <span>🌐</span></div>
+            <div class="package">Cultural Heritage Tour <span>🌐</span></div>
+            <div class="package">Weekend Getaway <span>🌐</span></div>
+            <div class="package">Spiritual Journey <span>🌐</span></div>
+            <div class="package">International Explorer <span>🌐</span></div>
+            <div class="package">Budget Backpacker <span>🌐</span></div>
+            <div class="package">Cruise Vacation <span>🌐</span></div>
+            <div class="package">Solo Traveler Plan <span>🌐</span></div>
+            <div class="package">Senior Citizen Special <span>🌐</span></div>
+            <div class="package">Student Tour Package <span>🌐</span></div>
+        </div>
+    </div>
+    <style class="css">
+        body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #e6f7ff, #ffffff);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    padding: 40px;
+}
+
+h1 {
+    color: #14b8a6;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.packages {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.package {
+    background: white;
+    border-radius: 12px;
+    padding: 15px 25px;
+    width: 220px;
+    font-size: 1.1rem;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #00bcd4;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.package span {
+    font-size: 1.2rem;
+}
+
+.package:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+    </style>
+</body>
+</html>
