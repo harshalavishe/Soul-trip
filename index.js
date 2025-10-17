@@ -44,3 +44,8 @@ const signinBtn = document.querySelector(".signin");
       window.location.href = "signin.html"; // change to your signin page path
 });
 
+// Add click for Search 
+document.getElementById("searchButton").addEventListener("click", function() {
+      window.open("https://www.makemytrip.com/tripideas/places-to-visit-in-dubai", "_blank");
+    });
+
